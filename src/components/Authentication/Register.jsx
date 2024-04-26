@@ -50,9 +50,10 @@ const Register = () => {
   };
 
   return (
-    <div className="lg:px-40 md:px-10 lg:py-8 mainLogin p-2 md:p-0">
+    <div className="register-container">
+      <div className="container mx-auto lg:px-40 md:px-10 lg:py-8 mainLogin p-2 md:p-0">
       <Helmet>
-        <title>UrbanIQ | Register</title>
+        <title>ArtSync | Register</title>
       </Helmet>
       <div className="bg-slate-200 grid lg:grid-cols-2 rounded-xl">
         <div className="flex flex-col gap-3 p-10 justify-between">
@@ -184,13 +185,14 @@ const Register = () => {
         {/* Image container */}
         <div className="loginsideimg hidden lg:inline md:inline">
           <img
-            className="w-full h-full rounded-tr-xl rounded-br-xl object-cover object-center"
-            src="https://i.ibb.co/DDy7rvk/regi.jpg"
+            className="w-full h-[750px] rounded-tr-xl rounded-br-xl object-center"
+            src="https://i.ibb.co/W0FGhBm/wallpaper-2.jpg"
             alt="Registration"
           />
         </div>
       </div>
       <ToastContainer />
+    </div>
     </div>
   );
 };

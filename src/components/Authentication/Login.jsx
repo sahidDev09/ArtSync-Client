@@ -136,8 +136,8 @@ const Login = () => {
         {/* image container */}
         <div className="loginsideimg hidden lg:inline md:inline ">
           <img
-            className=" w-full h-full rounded-tr-xl rounded-br-xl object-cover object-center"
-            src="https://i.ibb.co/sPWPXB0/login.jpg"
+            className="w-full h-[650px] rounded-tr-xl rounded-br-xl object-cover object-center"
+            src="https://i.ibb.co/hmGVVtS/Origami-2.jpg"
             alt=""
           />
         </div>

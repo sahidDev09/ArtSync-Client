@@ -18,7 +18,7 @@ const OthersLogin = () => {
     socialProvider().then((result) => {
       if (result.user) {
         //navigate route
-        toast.success("Logged in", { autoClose: 2000 });
+        toast.success("Logged in");
         setTimeout(() => {
           navigate(from);
         }, 1000);
