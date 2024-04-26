@@ -1,18 +1,15 @@
-
-import { Outlet } from 'react-router-dom'
-import './App.css'
-import Navbar from './components/Navbar'
+import { Outlet } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-
   return (
     <>
-      <div className=' container mx-auto'>
       <Navbar></Navbar>
       <Outlet></Outlet>
-      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

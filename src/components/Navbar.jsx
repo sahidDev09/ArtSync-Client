@@ -1,7 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import mainlogo from "../assets/mainLogo.png";
+import stockProfile from "../assets/profile.png";
+import { toast, ToastContainer } from "react-toastify";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Navbar = () => {
+  const { logOut, user } = useContext(AuthContext);
+
+  const handlelogOut = () => {
+    toast.error("Logged out");
+    setInterval(() => {
+      logOut();
+    }, 1000);
+  };
+
   const allLinks = (
     <>
       <li>
@@ -20,7 +33,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar container mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,8 +66,33 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        {user ? (
+          <div className=" flex items-center gap-2">
+            <div
+              data-tip={user.displayName}
+              className=" tooltip tooltip-bottom w-12 h-12 rounded-full border p-1">
+              <img
+                className=" object-cover rounded-full h-full w-full"
+                alt="Tailwind CSS Navbar component"
+                src={user?.photoURL || stockProfile}
+              />
+            </div>
+
+            <Link>
+              <button
+                onClick={handlelogOut}
+                className="btn bg-success text-white">
+                Logout
+              </button>
+            </Link>
+          </div>
+        ) : (
+          <Link to="/login">
+            <button className="btn bg-success text-white">Login</button>
+          </Link>
+        )}
       </div>
+      <ToastContainer />
     </div>
   );
 };
