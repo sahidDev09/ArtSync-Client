@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.login-container{
-    background-image: url('https://i.ibb.co/1GfyKWf/pngwing-com-6.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
+.login-container {
+  background-image: url("https://i.ibb.co/1GfyKWf/pngwing-com-6.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.register-container{
-    background-image: url('https://i.ibb.co/xm4zkKT/artsignup-2.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
+.register-container {
+  background-image: url("https://i.ibb.co/xm4zkKT/artsignup-2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
+.addarts-container {
+  background-image: url("https://i.ibb.co/4sjnK81/Contour-Line.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+}
