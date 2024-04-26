@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import "./Slider.css";
+import landscape from "../../assets/slider/landscape.jpg";
+import oil from "../../assets/slider/oilpainting.jpg";
+import chorcal from "../../assets/slider/charcoalsketching.jpg";
+import cartoon from "../../assets/slider/cartoonpaint.jpg";
 
 const Slider = () => {
   useEffect(() => {
@@ -52,108 +56,76 @@ const Slider = () => {
   return (
     <div className=" mt-14 rounded-md">
       <div className="slider container mx-auto rounded-md">
-        <div >
-        <div className="list">
-          <div className="item">
-            <img src="https://i.ibb.co/vDdn6bZ/catherine-kay-greenup-21nz-Scvbjs-M-unsplash-2.jpg" alt="" />
-            <div className="content">
-              <div className="title">MAGIC SLIDER</div>
-              <div className="type">FLOWER</div>
-              <div className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti temporibus quis eum consequuntur voluptate quae
-                doloribus distinctio. Possimus, sed recusandae. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Sequi, aut.
+        <div>
+          <div className="list">
+            <div className="item">
+              <img src={landscape} alt="" />
+              <div className="content">
+                <div className="title">LANDSCAPE PAINTING</div>
+                <div className="type">MOUNNTAINS</div>
+                <div className="description">
+                  Explore the serene and majestic landscapes through our
+                  evocative paintings. Each canvas tells a story of natures
+                  wonders
+                </div>
               </div>
-              <div className="button">
-                <button>SEE MORE</button>
+            </div>
+            <div className="item">
+              <img src={oil} alt="" />
+              <div className="content">
+                <div className="title">OIL PAINTING</div>
+                <div className="type">NATURAL</div>
+                <div className="description">
+                  Welcome to a world of unparalleled beauty and artistry. Our
+                  oil paintings capture the essence of landscapes with a
+                  mesmerizing blend of color and technique.
+                </div>
+              </div>
+            </div>
+            <div className="item">
+              <img src={chorcal} alt="" />
+              <div className="content">
+                <div className="title uppercase">Charcoal Sketching</div>
+                <div className="type">ART</div>
+                <div className="description">
+                  Discover the allure of charcoal as we redefine the boundaries
+                  of landscape sketching. Let our creations ignite your
+                  imagination and inspire your own artistic journey.
+                </div>
+              </div>
+            </div>
+            <div className="item">
+              <img src={cartoon} alt="" />
+              <div className="content">
+                <div className="title">CARTOON PAINTING</div>
+                <div className="type">ANIMATION</div>
+                <div className="description">
+                  Step into a world of laughter and delight with our cartoon
+                  paintings. Let our playful scenes and lively colors brighten
+                  your day and ignite your imagination
+                </div>
               </div>
             </div>
           </div>
-          <div className="item">
-            <img
-              src="https://images.unsplash.com/photo-1477647966959-5a95d41d625a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
-            <div className="content">
-              <div className="title">MAGIC SLIDER</div>
-              <div className="type">NATURAL</div>
-              <div className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti temporibus quis eum consequuntur voluptate quae
-                doloribus distinctio. Possimus, sed recusandae. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Sequi, aut.
-              </div>
-              <div className="button">
-                <button>SEE MORE</button>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <img src="https://images.unsplash.com/photo-1584929308615-da204fe8d113?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-            <div className="content">
-              <div className="title">MAGIC SLIDER</div>
-              <div className="type">FLOWER</div>
-              <div className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti temporibus quis eum consequuntur voluptate quae
-                doloribus distinctio. Possimus, sed recusandae. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Sequi, aut.
-              </div>
-              <div className="button">
-                <button>SEE MORE</button>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <img src="https://images.unsplash.com/photo-1454191297004-cefa4b1042d8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-            <div className="content">
-              <div className="title">MAGIC SLIDER</div>
-              <div className="type">FLOWER</div>
-              <div className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti temporibus quis eum consequuntur voluptate quae
-                doloribus distinctio. Possimus, sed recusandae. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Sequi, aut.
-              </div>
-              <div className="button">
-                <button>SEE MORE</button>
-              </div>
-            </div>
-          </div>
-          {/* Add other items similarly */}
-        </div>
         </div>
         <div className="thumbnail">
           <div className="item">
-            <img
-              src="https://i.ibb.co/vDdn6bZ/catherine-kay-greenup-21nz-Scvbjs-M-unsplash-2.jpg"
-              alt=""
-            />
+            <img src={landscape} alt="" />
           </div>
           <div className="item">
-            <img
-              src="https://images.unsplash.com/photo-1477647966959-5a95d41d625a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
+            <img src={oil} alt="" />
           </div>
           <div className="item">
-            <img
-              src="https://images.unsplash.com/photo-1584929308615-da204fe8d113?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
+            <img src={chorcal} alt="" />
           </div>
           <div className="item">
-            <img
-              src="https://images.unsplash.com/photo-1454191297004-cefa4b1042d8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
+            <img src={cartoon} alt="" />
           </div>
           {/* Add other thumbnail items similarly */}
         </div>
         <div className="nextPrevArrows">
-          <button className="prev">Previous</button>
-          <button className="next">Next</button>
+          <button className="prev">◀️</button>
+          <button className="next">▶️</button>
         </div>
       </div>
     </div>
