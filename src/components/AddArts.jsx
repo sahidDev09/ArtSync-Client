@@ -12,6 +12,7 @@ import { FaRegUser } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const AddArts = () => {
   const { user } = useContext(AuthContext);
@@ -59,18 +60,24 @@ const AddArts = () => {
       username,
     };
 
-    console.log(addInfo);
+    //add data to the mongodb
 
-    fetch("http://localhost:4000/arts&crafts", {
+    fetch("http://localhost:4000/addcrafts", {
       method: "POST",
-      headers: {
-        "content-type": "aplication/json",
-      },
+      headers: { "Content-type": "application/json" },
       body: JSON.stringify(addInfo),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Added",
+            text: "New data added successfully!",
+            icon: "success",
+          });
+          form.reset();
+        }
       });
   };
 
