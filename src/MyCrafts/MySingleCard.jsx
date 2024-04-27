@@ -19,11 +19,20 @@ const MySingleCard = ({ cardData }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire({
-          title: "Deleted!",
-          text: "Your file has been deleted.",
-          icon: "success",
-        });
+        fetch(`http://localhost:4000/mycrafts/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your Craft has been deleted.",
+                icon: "success",
+              });
+            }
+          });
       }
     });
   };

@@ -45,7 +45,7 @@ const AddArts = () => {
       toast.error("Please select any value from Subcategory option");
       return;
     }
-    if(rating >5){
+    if (rating > 5) {
       toast.error("Maximum rating limit is 5");
       return;
     }
@@ -66,7 +66,7 @@ const AddArts = () => {
 
     //add data to the mongodb
 
-    fetch("http://localhost:4000/addcrafts", {
+    fetch("http://localhost:4000/mycrafts", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(addInfo),
