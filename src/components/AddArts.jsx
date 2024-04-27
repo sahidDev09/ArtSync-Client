@@ -45,6 +45,10 @@ const AddArts = () => {
       toast.error("Please select any value from Subcategory option");
       return;
     }
+    if(rating >5){
+      toast.error("Maximum rating limit is 5");
+      return;
+    }
 
     const addInfo = {
       image,

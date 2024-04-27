@@ -12,7 +12,7 @@ import ArtsCrafts from "./components/Arts&Crafts.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import PrivateRoutes from "./Private/PrivateRoutes.jsx";
 import AddArts from "./components/AddArts.jsx";
-import MyCrafts from "./components/MyCrafts.jsx";
+import MyCrafts from "./MyCrafts/MyCrafts.jsx";
 
 const router = createBrowserRouter([
   {
