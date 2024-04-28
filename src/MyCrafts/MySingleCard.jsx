@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
-const MySingleCard = ({ cardData }) => {
+const MySingleCard = ({ cardData, control, setControl }) => {
   const { _id, image, item_name, scustom, price, rating, stock } = cardData;
 
   const handleDelete = (_id) => {
@@ -25,13 +25,13 @@ const MySingleCard = ({ cardData }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",
                 text: "Your Craft has been deleted.",
                 icon: "success",
               });
+              setControl(!control);
             }
           });
       }

@@ -15,13 +15,11 @@ import Swal from "sweetalert2";
 const UpdateCraft = () => {
   const [upCraft, setUpCraft] = useState({});
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
     fetch(`http://localhost:4000/updatecraft/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setUpCraft(data);
       });
   }, [id]);

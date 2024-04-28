@@ -5,6 +5,7 @@ import MySingleCard from "./MySingleCard";
 const MyCrafts = () => {
   const { user } = useContext(AuthContext);
   const [mydata, setMydata] = useState([]);
+  const [control, setControl] = useState(false);
 
   console.log(user);
 
@@ -14,7 +15,7 @@ const MyCrafts = () => {
       .then((data) => {
         setMydata(data);
       });
-  }, [user]);
+  }, [user, control]);
 
   return (
     <div className=" container mx-auto">
@@ -23,7 +24,11 @@ const MyCrafts = () => {
       </h1>
       <div className=" grid md:grid-cols-2 gap-5 my-10">
         {mydata.map((mcard, index) => (
-          <MySingleCard key={index} cardData={mcard}></MySingleCard>
+          <MySingleCard
+            key={index}
+            control={control}
+            setControl={setControl}
+            cardData={mcard}></MySingleCard>
         ))}
       </div>
     </div>
