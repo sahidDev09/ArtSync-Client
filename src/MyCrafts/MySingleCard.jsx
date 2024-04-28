@@ -3,6 +3,7 @@ import { MdMovieEdit } from "react-icons/md";
 import { AiOutlineStock } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const MySingleCard = ({ cardData }) => {
@@ -74,9 +75,11 @@ const MySingleCard = ({ cardData }) => {
           </div>
         </div>
         <div className="button flex flex-col gap-4 items-center justify-center">
-          <button className=" btn btn-warning">
-            <MdMovieEdit className=" text-xl" /> Update
-          </button>
+          <Link to="/updatedata">
+            <button className=" btn btn-warning">
+              <MdMovieEdit className=" text-xl" /> Update
+            </button>
+          </Link>
           <button
             onClick={() => handleDelete(_id)}
             className=" btn btn-error text-white">

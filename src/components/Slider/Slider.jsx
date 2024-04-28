@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
 import "./Slider.css";
 import landscape from "../../assets/slider/landscape.jpg";
 import oil from "../../assets/slider/oilpainting.jpg";
 import chorcal from "../../assets/slider/charcoalsketching.jpg";
 import cartoon from "../../assets/slider/cartoonpaint.jpg";
+import { useEffect } from "react";
 
 const Slider = () => {
   useEffect(() => {

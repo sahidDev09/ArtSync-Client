@@ -13,6 +13,7 @@ import { HelmetProvider } from "react-helmet-async";
 import PrivateRoutes from "./Private/PrivateRoutes.jsx";
 import AddArts from "./components/AddArts.jsx";
 import MyCrafts from "./MyCrafts/MyCrafts.jsx";
+import UpdateCraft from "./MyCrafts/UpdateCraft.jsx";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <MyCrafts></MyCrafts>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/updatedata",
+        element: (
+          <PrivateRoutes>
+            <UpdateCraft></UpdateCraft>
           </PrivateRoutes>
         ),
       },
