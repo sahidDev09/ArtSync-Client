@@ -75,7 +75,7 @@ const MySingleCard = ({ cardData }) => {
           </div>
         </div>
         <div className="button flex flex-col gap-4 items-center justify-center">
-          <Link to="/updatedata">
+          <Link to={`/updatedata/${_id}`}>
             <button className=" btn btn-warning">
               <MdMovieEdit className=" text-xl" /> Update
             </button>

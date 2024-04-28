@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Swiper from "swiper";
 import "swiper/css";
 import "./Customer.css";
+import { Typewriter } from "react-simple-typewriter";
 
 function CustomerTestimonials() {
   useEffect(() => {
@@ -33,9 +34,19 @@ function CustomerTestimonials() {
   }, []);
 
   return (
-    <section>
-      <h1>What our Customers Say</h1>
-      <p className=" text-gray-400 text-center">
+    <section className=" mt-10 text-center">
+      <span className=" text-3xl font-semibold text-center">
+        <Typewriter
+          words={["What our customer says"]}
+          loop={2}
+          cursor
+          cursorStyle="_"
+          typeSpeed={100}
+          deleteSpeed={50}
+          delaySpeed={1000}
+        />
+      </span>
+      <p className=" text-gray-400 text-center mt-3">
         Swipe left and right for more reviews
       </p>
 
