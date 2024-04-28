@@ -32,7 +32,7 @@ const Contact = () => {
           </label>
           <label className=" textarea  input-bordered flex items-center gap-2">
             <textarea
-              className=" w-full"
+              className=" w-full bg-transparent"
               name=""
               id=""
               cols="30"
