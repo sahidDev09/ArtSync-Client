@@ -81,7 +81,7 @@ const UpdateCraft = () => {
   };
 
   return (
-    <div>
+    <div className="md:min-h-screen">
       <div className=" container mx-auto bg-yellow-50 md:p-14 p-5 my-10 rounded-md">
         <h1 className=" text-3xl text-center mb-7">Update Art & Craft items</h1>
         <form onSubmit={handleUpdate} className=" grid md:grid-cols-2 gap-4">

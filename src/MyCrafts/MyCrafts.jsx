@@ -18,7 +18,7 @@ const MyCrafts = () => {
   }, [user, control]);
 
   return (
-    <div className=" container mx-auto">
+    <div className=" container mx-auto min-h-screen">
       <h1 className=" text-xl mt-5 font-bold text-blue-500 text-center">
         My Total Crafts :{mydata.length}
       </h1>

@@ -39,10 +39,10 @@ const MySingleCard = ({ cardData, control, setControl }) => {
   };
 
   return (
-    <div className=" border border-blue-300 b bg-blue-50 p-3 rounded-md">
-      <div className=" flex justify-between">
-        <div className="flex gap-4">
-          <div className=" w-64">
+    <div className=" border border-blue-300 b bg-blue-50 p-3 rounded-md m-4 md:m-0">
+      <div className=" lg:flex justify-between">
+        <div className="lg:flex gap-4">
+          <div className=" w-64 border">
             {image ? (
               <img src={image} />
             ) : (
@@ -74,7 +74,7 @@ const MySingleCard = ({ cardData, control, setControl }) => {
             </p>
           </div>
         </div>
-        <div className="button flex flex-col gap-4 items-center justify-center">
+        <div className="mt-5 lg:mt-0 button flex lg:flex-col gap-4 items-center lg:justify-center">
           <Link to={`/updatedata/${_id}`}>
             <button className=" btn btn-warning">
               <MdMovieEdit className=" text-xl" /> Update

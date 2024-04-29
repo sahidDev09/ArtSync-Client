@@ -86,7 +86,7 @@ const AddArts = () => {
   };
 
   return (
-    <div>
+    <div className=" md:min-h-screen">
       <div className="addarts-container container mx-auto bg-blue-50 md:p-14 p-5 my-10 rounded-md">
         <h1 className=" text-3xl text-center mb-7">
           Add New Art & Craft items
