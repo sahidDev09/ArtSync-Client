@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
 
 const ItemTable = ({ craft }) => {
-  const { image, item_name, price, subcategory_name, username, email } = craft;
+  const { _id, image, item_name, price, subcategory_name, username, email } =
+    craft;
 
   return (
     <tr>
@@ -32,9 +34,11 @@ const ItemTable = ({ craft }) => {
         </span>
       </td>
       <td>
-        <button className="btn btn-sm btn-success text-white">
-          View Details
-        </button>
+        <Link to={`/mycraft/${_id}`}>
+          <button className="btn btn-sm btn-success text-white">
+            View Details
+          </button>
+        </Link>
       </td>
     </tr>
   );

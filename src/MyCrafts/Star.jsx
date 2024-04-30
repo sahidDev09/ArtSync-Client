@@ -2,7 +2,7 @@
 import { IoIosStar, IoIosStarHalf, IoIosStarOutline } from "react-icons/io";
 
 const Star = ({ stars }) => {
-  const ratingNum = Array.from({ length: 5 }, (_, index) => index + 0.5);
+  const ratingNum = Array.from({ length: 5 }, (_, index) => index + 1);
 
   return (
     <div className="flex">

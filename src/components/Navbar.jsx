@@ -11,7 +11,7 @@ const Navbar = () => {
   // theme controller function
 
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "ligth"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
 
   const handleTogglelight = (e) => {
