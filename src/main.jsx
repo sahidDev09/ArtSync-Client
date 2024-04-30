@@ -15,6 +15,8 @@ import AddArts from "./components/AddArts.jsx";
 import MyCrafts from "./MyCrafts/MyCrafts.jsx";
 import UpdateCraft from "./MyCrafts/UpdateCraft.jsx";
 import CardDetails from "./components/CardDetails.jsx";
+import SingleCategory from "./components/Home/SingleCategory.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -75,9 +77,13 @@ const router = createBrowserRouter([
       },
 
       {
-        
-      }
-
+        path: "/categories/:subcategory_name",
+        element: <SingleCategory></SingleCategory>,
+        loader: ({ params }) =>
+          fetch(
+            `https://art-sync-server.vercel.app/categories/${params.subcategory_name}`
+          ),
+      },
     ],
   },
 ]);
