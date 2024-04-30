@@ -4,10 +4,6 @@ import { AiOutlineStock } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-
 /* eslint-disable react/prop-types */
 const MySingleCard = ({ cardData, control, setControl }) => {
   const { _id, image, item_name, scustom, price, rating, stock } = cardData;
@@ -41,27 +37,25 @@ const MySingleCard = ({ cardData, control, setControl }) => {
     });
   };
 
-  //aos
 
-  useEffect(() => {
-    Aos.init({ duration: "1000" });
-  }, []);
+
+ 
 
   return (
     <div
-      data-aos="fade-up"
+     
       className="border border-blue-50 bg-base-200 p-3 rounded-md m-4 md:m-0">
       <div className=" lg:flex justify-between">
         <div className="lg:flex gap-4">
-          <div className=" w-64 border">
+          <div className=" w-64 h-48 border">
             {image ? (
-              <img src={image} />
+              <img className=" w-full h-full" src={image} />
             ) : (
               <img src="https://i.ibb.co/s61CJGq/random.jpg" />
             )}
           </div>
           <div className="content flex flex-col gap-1">
-            <h1 className=" text-2xl font-bold">{item_name}</h1>
+            <h1 className=" text-xl font-semibold">{item_name}</h1>
 
             <div className="flex items-center gap-2">
               Rating: <Star stars={rating}></Star>
