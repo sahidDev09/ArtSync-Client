@@ -73,6 +73,11 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`https://art-sync-server.vercel.app/updatecraft/${params.id}`),
       },
+
+      {
+        
+      }
+
     ],
   },
 ]);
