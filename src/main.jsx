@@ -60,6 +60,7 @@ const router = createBrowserRouter([
             <UpdateCraft></UpdateCraft>
           </PrivateRoutes>
         ),
+      
       },
     ],
   },

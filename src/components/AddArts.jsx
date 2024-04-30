@@ -13,6 +13,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const AddArts = () => {
   const { user } = useContext(AuthContext);
@@ -87,6 +88,9 @@ const AddArts = () => {
 
   return (
     <div className=" md:min-h-screen">
+      <Helmet>
+          <title>ArtSync | AddCraft</title>
+        </Helmet>
       <div className="addarts-container container mx-auto bg-base-300 md:p-14 p-5 my-10 rounded-md">
         <h1 className=" text-3xl text-center mb-7">
           Add New Art & Craft items

@@ -4,6 +4,9 @@ import { AiOutlineStock } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 /* eslint-disable react/prop-types */
 const MySingleCard = ({ cardData, control, setControl }) => {
@@ -38,8 +41,16 @@ const MySingleCard = ({ cardData, control, setControl }) => {
     });
   };
 
+  //aos
+
+  useEffect(() => {
+    Aos.init({ duration: "1000" });
+  }, []);
+
   return (
-    <div className=" border border-blue-50 bg-base-200 p-3 rounded-md m-4 md:m-0">
+    <div
+      data-aos="fade-up"
+      className="border border-blue-50 bg-base-200 p-3 rounded-md m-4 md:m-0">
       <div className=" lg:flex justify-between">
         <div className="lg:flex gap-4">
           <div className=" w-64 border">

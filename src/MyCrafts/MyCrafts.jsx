@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import MySingleCard from "./MySingleCard";
+import { Helmet } from "react-helmet";
 
 const MyCrafts = () => {
   const { user } = useContext(AuthContext);
@@ -44,8 +45,11 @@ const MyCrafts = () => {
   };
 
   return (
-    <div className=" container mx-auto min-h-screen">
-      <h1 className=" text-xl mt-5 font-bold text-blue-500 text-center">
+    <div className="container mx-auto min-h-screen">
+      <Helmet>
+        <title>ArtSync | MyCraft</title>
+      </Helmet>
+      <h1 className="text-xl mt-5 font-bold text-blue-500 text-center">
         My Total Crafts :{mydata.length}
       </h1>
 
@@ -71,7 +75,13 @@ const MyCrafts = () => {
 
       {/* end of sort */}
 
-      <div className=" grid md:grid-cols-2 gap-5 my-10">
+      {mydata.length === 0 && (
+        <div className=" flex justify-center items-center mt-10">
+          <img src="https://i.ibb.co/rtcYN6n/nodatafound.png" alt="" />
+        </div>
+      )}
+
+      <div className="grid md:grid-cols-2 gap-5 my-10">
         {mydata.map((mcard, index) => (
           <MySingleCard
             key={index}
